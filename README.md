@@ -1,69 +1,52 @@
-# How-to-re-order-the-default-toolbar-items-in-Xamarin.Forms-SfImageEditor
-This article explains how to re-order the default toolbar items in Syncfusion Xamarin.Forms SfImageEditor control.
+# How to re-order the default toolbar items in Xamarin.Forms SfImageEditor
 
-Before re-ordering the items, by default it shows like in below
+This repository contains sample foe how to re-order the default toolbar items in the [Syncfusion Xamarin.Forms Image Editor](https://help.syncfusion.com/xamarin/image-editor/getting-started) control.
 
-![](https://github.com/SyncfusionExamples/How-to-re-order-the-default-toolbar-items-in-Xamarin.Forms-SfImageEditor/blob/main/Default_ToolbarItems_Arrangement.png)
+Please refer the KB through this [link](https://www.syncfusion.com/kb/12195/how-to-re-order-the-default-toolbar-items-in-xamarin-forms-sfimageeditor).
 
+## Syncfusion controls
 
-After re-ordering the items, it will be displayed like in below
+This project used the following Syncfusion control(s):
+* [SfImageEditor](https://www.syncfusion.com/xamarin-ui-controls/xamarin-image-editor)
 
- ![](https://github.com/SyncfusionExamples/How-to-re-order-the-default-toolbar-items-in-Xamarin.Forms-SfImageEditor/blob/main/After_ToolbarItems_Reordering.png)
+## Supported platforms
 
+| Platforms | Supported versions |
+| --------- | ------------------ |
+| Android   | API level 21 and later versions |
+| iOS | iOS 9.0 and later versions |
+| UWP | Windows 10 devices |
 
-This can be achieved by clearing the default toolbar items in the SfImageEditor control and add the toolbar items based on the index as per your desired which is mentioned in below 
- 
-**[XAML]**
+## Requirements to run the sample
 
-*Define the SfImageEditor with binding its desired image 
- 
- ```
- …
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <Grid Margin="10">
-            <imageeditor:SfImageEditor Source="{Binding Image}" x:Name="editor"  />
-        </Grid>
-    </ContentPage.Content> 
-    …
-```
-**[C#]
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
-*Clear the default toolbar items and arrange the toolbar as per your desired order
- 
- ```
-   …
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin-ios/system-requirements)
 
-public MainPage()
-        {
-            InitializeComponent();
+## How to run the sample
 
-            var toolbarCollection = new ObservableCollection<Syncfusion.SfImageEditor.XForms.ToolbarItem>(editor.ToolbarSettings.ToolbarItems);
-            editor.ToolbarSettings.ToolbarItems.Clear();
+1. Clone the sample and open it in Visual Studio.
 
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[2]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[4]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[0]);
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the App.xaml.cs file as demonstrated in the following code.
 
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[3]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[1]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[8]);
+		public App()
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+	
+			InitializeComponent();
+	
+			MainPage = new App1.MainPage();
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/xamarin/licensing/overview) for more details.
+	
+3. Clean and build the application.
 
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[6]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[7]);
-            editor.ToolbarSettings.ToolbarItems.Add(toolbarCollection[5]);
+4. Run the application.
 
-        }
+## License
 
-   …
-```
-
-## See also
-
-[How to customize the toolbar items in SfImageEditor](https://help.syncfusion.com/xamarin/image-editor/toolbarcustomization#customize-toolbar-items)
-
-[How to show or hide the toolbar in SfImageEditor](https://help.syncfusion.com/xamarin/image-editor/toolbarcustomization#to-hideshow-toolbar)
-
-[How to customize the toolbar height in SfImageEditor](https://help.syncfusion.com/xamarin/image-editor/toolbarcustomization#toolbarheight-customization)
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
