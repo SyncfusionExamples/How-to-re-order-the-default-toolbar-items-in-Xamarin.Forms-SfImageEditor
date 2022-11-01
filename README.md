@@ -1,6 +1,6 @@
 # How to re-order the default toolbar items in Xamarin.Forms SfImageEditor
 
-This repository contains sample foe how to re-order the default toolbar items in the [Syncfusion Xamarin.Forms Image Editor](https://help.syncfusion.com/xamarin/image-editor/getting-started) control.
+This repository contains sample for how to re-order the default toolbar items in the [Syncfusion Xamarin.Forms Image Editor](https://help.syncfusion.com/xamarin/image-editor/getting-started) control.
 
 Please refer the KB through this [link](https://www.syncfusion.com/kb/12195/how-to-re-order-the-default-toolbar-items-in-xamarin-forms-sfimageeditor).
 
